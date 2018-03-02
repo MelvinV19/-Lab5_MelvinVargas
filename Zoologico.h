@@ -25,6 +25,8 @@ class Zoologico{
 		string getNombre();
 		int getTam();
 		int getCapacidad();
+		void transferir(Animal*,int);
+		void imprimir();
 		
 		
 };

@@ -28,7 +28,7 @@ int main(){
 	cin>>capacidad;
 	Zoologico* zoo=new Zoologico(nombre,tam,capacidad);
 	vector<Animal*>listaespera;
-	while(op!=5){
+	while(op!=6){
 		switch(op=menu()){
 			case 1:{
 					   //creamos el animal
@@ -124,14 +124,7 @@ int main(){
 					   Animal* animal=new Animal(especie,nombre,tam,tipo,patas,pelaje,ojos,orejas,cola);
 					   listaespera.push_back(animal);
 					   cout<<"El animal se ha agregado a la lista de espera"<<endl;
-					   delete animal;
-					   delete cola;
-					   delete patas;
-					   delete ojos;
-					   delete orejas;
-					   delete pelaje;
-
-
+				
 				   }
 				   break;
 			case 2:{
@@ -150,15 +143,27 @@ int main(){
 					   delete listaespera[pos];
 					   listaespera.erase(listaespera.begin()+pos);
 					   cout<<"Animal eliminado"<<endl;
-					
-
 				   }
 				   break;
 			case 4:{
+					   Animal* animal;
+					   for(int i=0;i<listaespera.size();i++){
+						   animal=listaespera[i];
+						   zoo->transferir(animal,animal->getTipo());
+					   }
+
+					   
+					   listaespera.clear();
+
+
+					   
 
 				   }
 				   break;
 			case 5:{
+					   zoo->imprimir();
+					   
+					   
 
 				   }
 				   break;
@@ -170,10 +175,6 @@ int main(){
 		}
 
 	}
-
-
-
-
 
 	return 0;
 }

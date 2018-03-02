@@ -1,5 +1,6 @@
 #include "Animal.h"
 #include <string>
+
 using namespace std;
 
 Animal::Animal(){
