@@ -137,12 +137,16 @@ int main(){
 				   }
 				   break;
 			case 3:{
-					   int pos;
-					   cout<<"Ingrese la posicion del animal que desea elminar";
-					   cin>>pos;
-					   delete listaespera[pos];
-					   listaespera.erase(listaespera.begin()+pos);
-					   cout<<"Animal eliminado"<<endl;
+					   if(listaespera.size()==0){
+						   cout<<"No hay animales en la lista"<<endl;
+					   }else{	   
+							int pos;
+							cout<<"Ingrese la posicion del animal que desea elminar";
+							cin>>pos;
+							delete listaespera[pos];
+							listaespera.erase(listaespera.begin()+pos);
+							cout<<"Animal eliminado"<<endl;
+					   }
 				   }
 				   break;
 			case 4:{
@@ -168,6 +172,7 @@ int main(){
 				   }
 				   break;
 			case 6:{
+					   delete zoo;
 
 				   }
 				   break;

@@ -7,7 +7,7 @@ Animal.o: Animal.h Animal.cpp
 Cola.o: Cola.h Cola.cpp
 	g++ -c Cola.cpp
 
-main.o: Zoologico.h  Animal.h  Patas.h  Pelaje.h  Ojos.h  Orejas.h  Cola.h 
+main.o: main.cpp Zoologico.h  Animal.h  Patas.h  Pelaje.h  Ojos.h  Orejas.h  Cola.h 
 	g++ -c main.cpp
 
 Orejas.o: Orejas.h Orejas.cpp
@@ -16,7 +16,7 @@ Orejas.o: Orejas.h Orejas.cpp
 Patas.o: Patas.h Patas.cpp
 	g++ -c Patas.cpp
 
-Zoologico.o: Zoologico.h Zoologico.cpp Animal.h Animal.cpp
+Zoologico.o: Zoologico.h Zoologico.cpp Animal.h 
 	g++ -c Zoologico.cpp
 
 Ojos.o: Ojos.h Ojos.cpp
